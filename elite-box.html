@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite box</title>
+    <style>
+        *{ box-sizing: ;}
+        .box {
+            height: 300px;
+            width: 600px;
+            border: 20px solid rgba(0,0,0,.5);
+            background: url(imgs/bottom1.jpg);
+            background-origin: border-box;
+            background-size: 120% 120%;
+            display: flex;
+            justify-content:center;
+            align-items: center; 
+            background-position: -50px 0;
+            transition: 2s;
+            position: relative;
+        }
+       
+
+        .box span {
+            position: absolute;
+            top:36%;
+            left:51%;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 24px;
+        
+        }
+
+        .box span::first-letter { 
+            color: red;
+        } 
+ 
+        .box .effect {
+            height: 150px;
+            width: 300px;
+            background: transparent;
+            border: 4px solid #fff;
+            padding: 120px 0 0 260px;
+            font-size: 22px;
+            color: #fff;
+            font-family: cursive;
+            letter-spacing: 9px;
+            opacity: 0;
+            transition: 1s;
+           
+        }
+
+        .box:hover {background-position: 0 0;}
+
+        .box:hover .effect{
+            opacity: 1;
+        }
+            
+    
+    </style>
+</head>
+<body>
+   <div class="box">
+     
+        <span>Fall Ahead</span>  
+        <div class="effect">New Arrival</div>
+   </div>
+</body>
+</html>
